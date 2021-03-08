@@ -14,6 +14,26 @@ public class Libretto {
 		this.voti.add(voto);
 	}
 	
+	public List<Voto> listaVotiUguali(int punteggio) {
+		List<Voto> s =new ArrayList<>(); 
+		
+		for(Voto v: this.voti)
+			if(v.getVoto()==punteggio)
+				s.add(v);
+		
+		return s; 
+	}
+	
+	public Libretto votiUguali(int punteggio) {
+		Libretto s =new Libretto(); 
+		
+		for(Voto v: this.voti)
+			if(v.getVoto()==punteggio)
+				s.add(v);
+		
+		return s; 
+	}
+	
 	public String toString() {
 		String s=""; 
 		
